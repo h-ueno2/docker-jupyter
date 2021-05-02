@@ -6,5 +6,8 @@ services:
     ports:
       - 8888:8888
     tty: true
-#    volumes:
-#      - ./opt:/root/opt
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - C:\work\Python:/home/jovyan/work
+    command: start-notebook.sh --NotebookApp.token=''
